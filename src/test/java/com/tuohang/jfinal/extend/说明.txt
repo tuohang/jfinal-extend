@@ -1,0 +1,30 @@
+如果对象是Record则调用：recordToCondition(Record recordClass,String alias)；用法都和上面的一样
+
+注意别名也不是必须要传入的
+
+调用上面的方法之后怎么获取生成的SQL和参数呢？
+ condi.getSql() //获取到条件SQL
+condi.getParamList();//获取到参数数组;
+
+
+因为是个参数的List你也可用跟你之前的其他参数进行合并，合并之后记得toArray()传入jFInal中
+
+好现在总结一下：
+
+如果你不需要对字段进行相关类型的查询只需要三步
+
+    1：实例化Conditions 、
+
+    2：传入Model或者Record生成条件SQL和参数、
+
+    3：获取生成的SQL和参数
+
+如果你需要对查询过程中某些字段进行相关的类型控制就四步
+
+    1：实例化Conditions 、
+
+    2：对字段进行查询控制
+
+    3：传入Model或者Record生成条件SQL和参数、
+
+    4：获取生成的SQL和参数

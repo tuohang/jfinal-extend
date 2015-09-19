@@ -1,0 +1,18 @@
+一直在用JFINAL，感觉不错，前几天，需要用到一个功能：EXCEL导入，需要记录EXCEL导入日志，并需要记录成功或者失败，如果失败，是神马原因造成的，
+可是JFINAL的声名式事务，一但抛出异常，则整个事务回滚，于是我无法记录导入失败日志到数据表中。。。。
+Db.tx(new IAtom() 这样的方式,也挺复杂的,,无法访问外端的数据,
+,也许是我没找到方法吧,,但时间不允许了,只好自己写了一个用,分享出来大家帮着看看,会不会有什么问题!
+使用方法:
+
+xxModel xm = new xxModel();
+xm.set...
+xm.set..
+xm.save();
+JfinalTransKit.beginTran();
+try{
+    update1....
+    update2...
+   JfinalTransKit.commit();
+}catch(Exception e){
+     JfinalTransKit.rollback();
+}
