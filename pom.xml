@@ -15,12 +15,12 @@
 
 		<junit.version>4.10</junit.version>
 		<commons-lang.version>3.3.2</commons-lang.version>
-		<commons-configuration.version>1.10</commons-configuration.version>
 		<fastjson.version>1.2.4</fastjson.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<jfinal.version>2.0</jfinal.version>
 		<jfinal-quartz.version>0.2</jfinal-quartz.version>
 		<quartz.version>2.2.1</quartz.version>
+		<httpcomponents.version>4.5</httpcomponents.version>
 
 		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
 		<tomcat6-maven-plugin.version>2.2</tomcat6-maven-plugin.version>
@@ -41,13 +41,6 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang.version}</version>
-		</dependency>
-
-		<!-- apache关于配置文件的工具类 -->
-		<dependency>
-			<groupId>commons-configuration</groupId>
-			<artifactId>commons-configuration</artifactId>
-			<version>${commons-configuration.version}</version>
 		</dependency>
 
 		<!-- json解析 -->
@@ -93,11 +86,17 @@
 			<version>${quartz.version}</version>
 		</dependency>
 
+		<!-- 处理http请求 -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.36</version>
-			<scope>provided</scope>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpcomponents.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>${httpcomponents.version}</version>
 		</dependency>
 
 	</dependencies>

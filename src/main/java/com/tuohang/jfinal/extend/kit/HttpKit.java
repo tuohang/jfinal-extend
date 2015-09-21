@@ -29,6 +29,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.jfinal.kit.StrKit;
 
+/**
+ * 简易版的httpKit
+ * 
+ * @author Lims
+ * @date 2015年9月20日
+ * @version 1.0
+ */
 public class HttpKit {
 
 	private HttpKit() {
@@ -81,6 +88,7 @@ public class HttpKit {
 
 	/**
 	 * HttpKit核心
+	 * 
 	 * @param url
 	 * @param sslSocketFactory
 	 * @param method
