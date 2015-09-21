@@ -1,0 +1,27 @@
+# Maven
+target/
+pom.xml.versionsBackup
+
+# IntelliJ
+*.iml
+.idea/
+
+# Eclipse
+.project
+.classpath
+.settings/
+/.settings/org.eclipse.wst.common.project.facet.core.xml
+bin/
+.metadata
+
+# JRebel
+rebel.xml
+
+# OSX
+.DS_Store
+
+# Netbeans
+nb-configuration.xml
+
+# Windows
+Thumbs.db
